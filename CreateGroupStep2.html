@@ -1,0 +1,80 @@
+import React from 'react';
+import s from './CreateGroupStep2.module.scss';
+
+const CreateGroupStep2 = () => {
+    return (<div>
+                <main>
+                    <h1>Group Settings AlexG</h1>
+                    <legend>Privacy options</legend>
+                    <section>
+                        <form className={s.firstForm}>
+                            <label for="public" className={s.radioWrapper}>
+                                <input type="radio" id="public" name="yourInput" value="Public" className={s.radioInput} checked/>
+                                <div className={s.radioRadio}></div>
+                                This is a public group
+                            </label>
+                            <div className={s.ulParent}>
+                                <ul>
+                                    <li>Any site member can join this group.</li>
+                                    <li>This group will be listed in the groups directory and in search results.</li>
+                                    <li>Group content and activity will be visible to any site member.</li>
+                                </ul>
+                            </div>
+                            
+                            <label for="private" className={s.radioWrapper}>
+                                <input type="radio" id="private" name="yourInput" value="Private" className={s.radioInput} checked/>
+                                <div className={s.radioRadio}></div>
+                                This is a private group
+                            </label>
+                            <div className={s.ulParent}>
+                                <ul>
+                                    <li>Only users who request membership and are accepted can join the group.</li>
+                                    <li>This group will be listed in the groups directory and in search results.</li>
+                                    <li>Group content and activity will only be visible to members of the group.</li>
+                                </ul>
+                            </div>
+                            
+                            <label for="hidden" className={s.radioWrapper}>
+                                <input type="radio" id="hidden" name="yourInput" value="Hidden" className={s.radioInput} checked/>
+                                <div className={s.radioRadio}></div>
+                                This is a hidden group
+                            </label>
+                            <div className={s.ulParent}>
+                                <ul>
+                                    <li>Only users who are invited can join the group.</li>
+                                    <li>This group will not be listed in the groups directory or search results.</li>
+                                    <li>Group content and activity will only be visible to members of the group.</li>
+                                </ul>
+                            </div>
+                            
+                        </form>
+                        {/* second form */}
+                        <legend>Privacy options</legend>
+                        <legend className={s.legendPlus}>Which member of this group are allowed to invite others?</legend>
+                        <form className={s.secondForm}>
+                            <label for="group" className={s.radioWrapper}>
+                                <input type="radio" id="group" name="select" value="Group" className={s.radioInput} checked/>
+                                <div className={s.radioRadio}></div>
+                                All group members
+                            </label>
+                            <label for="modAdmin" className={s.radioWrapper}>
+                                <input type="radio" id="modAdmin" name="select" value="Mod" className={s.radioInput} checked/>
+                                <div className={s.radioRadio}></div>
+                                Group admins and mods only
+                            </label>
+                            <label for="admin" className={s.radioWrapper}>
+                                <input type="radio" id="admin" name="select" value="Admin" className={s.radioInput} checked/>
+                                <div className={s.radioRadio}></div>
+                                Group admins only
+                            </label>
+                        </form>
+                    </section>
+                    <div className={s.buttonBlock}>
+                        <button className={s.buttonPrevious} type="previous">Previous step</button>
+                        <button className={s.buttonNext} type="next">Next</button>
+                    </div>
+                </main>
+            </div>)
+}
+
+export default CreateGroupStep2;
